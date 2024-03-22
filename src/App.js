@@ -4,20 +4,58 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-body">
+        <div className="App-section">
+          <div className="oishi"> shrimp おいしい, buy&nbsp;
+            <a
+              href="#"
+              className="App-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              $shrimp
+            </a>
+          </div>
+          &nbsp;
+          &nbsp;
+          <a
+            href="#"
+            className="App-link 🍤"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🍤
+          </a>
+        </div>
+        <div className="App-link-list">
+          <a
+            className="App-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="App-img" src="/shrimp.png" />
+          </a>
+          <a
+            className="App-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="App-img" src="/ton_symbol.png" />
+          </a>
+          <a
+            className="App-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="App-img" src="/tg.webp" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
