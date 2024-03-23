@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="64" width="64"><text y="28" font-size="16"> 🦐 </text><path d="M0,2 L0,0 L2,0" fill="red" /></svg>'), auto;
 }
 
 .App-header {
@@ -22,6 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="64" width="64"><text y="28" font-size="16"> 🦐 </text></svg>');
 }
 
 .App-section {
@@ -36,13 +38,13 @@
   font-size: 2rem;
 }
 
-.🍤 {
+.🦐 {
   font-size: 6rem;
   text-decoration: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .🍤 {
+  .🦐 {
     animation: rotate infinite 20s linear;
   }
 }
