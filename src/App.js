@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -44,11 +43,11 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="App-img" src="/shrimp.png" />
+            <img className="App-img" src="/shrimp.svg" />
           </a>
           <a
             className="App-link"
-            href="#"
+            href="https://ton.org"
             target="_blank"
             rel="noopener noreferrer"
           >
