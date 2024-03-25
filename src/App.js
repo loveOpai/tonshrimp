@@ -43,7 +43,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="App-img" src="/shrimp.svg" />
+            <img className="App-img" src="/shrimp.png" />
           </a>
           <a
             className="App-link"
