@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-  /* cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="64" width="64"><text y="16" font-size="16"> 🦐 </text><path d="M0,2 L0,0 L2,0" fill="red" /></svg>'), auto; */
+  cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="64" width="64"><text y="16" font-size="16"> 🦐 </text><path d="M0,2 L0,0 L2,0" fill="red" /></svg>'), auto;
+  /* cursor: url('../public/shrimp.png'), auto; */
+  /* cursor: url('https://shrimp.tg/shrimp.png'), auto; */
+  user-select: none;
 }
 
 .App-header {
@@ -52,13 +55,15 @@
 }
 
 .🦐 {
-  font-size: 6rem;
-  text-decoration: none;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: default;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .🦐 {
-    animation: rotate infinite 20s linear;
+    animation: comeDown 1s ease;
   }
 }
 
@@ -87,5 +92,17 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes comeDown {
+  0% {
+    transform: translateY(0vh); opacity: 1;
+  }
+  15% {
+    transform: translateY(-10vh); opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh); opacity: 0;
   }
 }
