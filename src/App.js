@@ -31,7 +31,7 @@ function App() {
         <div className="App-link-list">
           <a
             className="App-link"
-            href="#"
+            href="https://telegram.org"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -39,7 +39,7 @@ function App() {
           </a>
           <a
             className="App-link"
-            href="#"
+            href="https://t.me/ton_shrimp"
             target="_blank"
             rel="noopener noreferrer"
           >
