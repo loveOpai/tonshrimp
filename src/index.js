@@ -81,7 +81,7 @@ function mouseDownHandler(event) {
   if (mousemove) return;
   interval = setInterval(() => {
     clickAnimation(event);
-  }, 500);
+  }, 250);
 }
 
 function mouseUpHandler(event) {
