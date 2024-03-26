@@ -39,20 +39,75 @@ function flyShrimp(event) {
   const shrimpImage = new Image();
   shrimpImage.src = '/shrimp.png';
   shrimpImage.classList.add('🦐');
-  shrimpImage.style.top = `${event.offsetY + randomPosition(160)}px`;
-  shrimpImage.style.left = `${event.offsetX - 5 + randomPosition(160)}px`;
+  shrimpImage.style.top = `${event.clientY + randomPosition(160)}px`;
+  shrimpImage.style.left = `${event.clientX + randomPosition(160)}px`;
   shrimpAnimationEnd(shrimpImage);
   document.body.appendChild(shrimpImage);
 }
 
+function shrimps(event, number) {
+  for(let i = 0; i < number; i = i + 1) {
+    flyShrimp(event)
+  }
+}
+
 function clickAnimation(event) {
-  flyShrimp(event);
-  flyShrimp(event);
-  flyShrimp(event);
-  flyShrimp(event);
-  flyShrimp(event);
-  flyShrimp(event);
+  setTimeout(() => shrimps(event, 1), 0);
+  setTimeout(() => shrimps(event, 3), 50);
+  setTimeout(() => shrimps(event, 5), 150);
+  setTimeout(() => shrimps(event, 7), 250);
+}
+
+let mouseDown = false;
+let mousemove = false;
+let timeout = null;
+let interval = null;
+
+function mousePressMoveAnimation(event) {
+  if (!mouseDown) return;
+  mousemove = true;
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+  if (interval) {
+    clearInterval(interval);
+  }
+  timeout = setTimeout(() => mousemove = false, 500);
+  clickAnimation(event);
+}
+
+function mouseDownHandler(event) {
+  mouseDown = true;
+  if (mousemove) return;
+  interval = setInterval(() => {
+    clickAnimation(event);
+  }, 500);
+}
+
+function mouseUpHandler(event) {
+  mouseDown = false;
+  if (interval) {
+    clearInterval(interval);
+  }
 }
 
 preloadShrimp();
-document.body.addEventListener('click', clickAnimation, false)
+
+// https://dev.to/jeetvora331/throttling-in-javascript-easiest-explanation-1081
+function throttle(mainFunction, delay) {
+  let timerFlag = null; // Variable to keep track of the timer
+  // Returning a throttled version
+  return (...args) => {
+    if (timerFlag === null) { // If there is no timer currently running
+      mainFunction(...args); // Execute the main function
+        timerFlag = setTimeout(() => { // Set a timer to clear the timerFlag after the specified delay
+        timerFlag = null; // Clear the timerFlag to allow the main function to be executed again
+      }, delay);
+    }
+  };
+}
+
+document.body.addEventListener('click', clickAnimation, false);
+document.body.addEventListener('mousedown', mouseDownHandler, false);
+document.body.addEventListener('mouseup', mouseUpHandler, false);
+document.body.addEventListener('mousemove', throttle(mousePressMoveAnimation, 50), false);
