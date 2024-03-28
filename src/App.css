@@ -78,7 +78,7 @@
 }
 
 .App-link-list {
-  width: 240px;
+  width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,14 +86,36 @@
 }
 
 .App-img {
-  width: 64px;
-  height: 64px;
+  width: 100%;
+}
+
+.App-x {
+  width: 80%;
 }
 
 .App-link {
   display: flex;
   color: white;
   cursor: pointer;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+}
+
+.kablammo-font {
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 0;
+}
+
+.App-buy {
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+  transform: rotate(15deg);
 }
 
 @keyframes rotate {
