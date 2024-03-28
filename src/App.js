@@ -53,14 +53,14 @@ function App() {
           >
             <img className="App-img" src="/ton_symbol.png" />
           </a>
-          {/* <a */}
-          {/*   className="App-link" */}
-          {/*   href="#" */}
-          {/*   target="_blank" */}
-          {/*   rel="noopener noreferrer" */}
-          {/* > */}
-          {/*   <img className="App-img App-x" src="/x.svg" /> */}
-          {/* </a> */}
+          <a
+            className="App-link"
+            href="https://twitter.com/ton_shrimp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="App-img App-x" src="/x.svg" />
+          </a>
           <a
             className="App-link App-buy kablammo-font"
             href="https://dedust.io/swap/TON/EQCUBcy-K56xWCKSAtf2wMfmImNmDshmYlDxvKSDuyK82gBa"
